@@ -1,0 +1,39 @@
+# Dependencies (reinstalled inside the image)
+node_modules
+npm-debug.log*
+
+# Build output (rebuilt inside the image)
+.next
+out
+build
+
+# Version control
+.git
+.gitignore
+
+# Environment files (injected at runtime via --env-file or orchestrator)
+.env
+.env.*
+!.env.local.example
+
+# IDE / editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# CI / docs / misc
+.github
+docs
+coverage
+*.md
+LICENSE

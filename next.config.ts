@@ -61,6 +61,11 @@ const SECURITY_HEADERS = [
 ] as const;
 
 const nextConfig: NextConfig = {
+  // Produce a self-contained build under .next/standalone so the Docker
+  // image only ships the files actually required at runtime (server.js +
+  // traced node_modules). See: https://nextjs.org/docs/app/guides/self-hosting
+  output: "standalone",
+
   /**
    * Cache-Control policy.
    *
